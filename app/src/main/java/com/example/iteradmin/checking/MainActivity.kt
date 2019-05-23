@@ -12,23 +12,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
           val id:Int=v.id
           when(id){
-              R.id.checkBox ->{
-                  toast("Narendra Modi")
+              R.id.checkBox ->
+              {
+                 val s:String=findViewById<CheckBox>(R.id.checkBox).text.toString()
+                  toast(s)
               }
               R.id.checkBox2 ->{
-                  toast("rahul gandhi")
-              }
+                  val s:String=findViewById<CheckBox>(R.id.checkBox2).text.toString()
+                  toast(s)
+               }
               R.id.checkBox3 ->{
-                  toast("MAMATA BANERJEE")
+                  val s:String=findViewById<CheckBox>(R.id.checkBox3).text.toString()
+                  toast(s)
               }
               R.id.checkBox4 ->{
-                  toast("NAVIN PATTNAIAK")
+                  val s:String=findViewById<CheckBox>(R.id.checkBox4).text.toString()
+                  toast(s)
               }
           }
     }
     fun toast(message: String)
     {
-        Toast.makeText(applicationContext,message+"will be next PM",Toast.LENGTH_LONG).show()
+        Toast.makeText(applicationContext,message+"will be the PM",Toast.LENGTH_LONG).show()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
